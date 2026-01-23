@@ -1,0 +1,36 @@
+body {
+    font-family: Georgia, serif;
+    background-color: #fafafa;
+    margin: 0;
+}
+
+header {
+    background-color: #0a3d62;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+.blog-list {
+    padding: 20px;
+}
+
+.blog-list article {
+    background: white;
+    padding: 20px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+}
+
+.post {
+    background: white;
+    margin: 20px;
+    padding: 25px;
+    border-radius: 6px;
+}
