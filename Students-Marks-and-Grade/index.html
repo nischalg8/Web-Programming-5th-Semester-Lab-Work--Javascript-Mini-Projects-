@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Student Marks and Grade Analyzer</title>
+        <link rel="stylesheet" href="styles.css" />
+        <script src="scripts.js" defer></script>
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>Student Marks and Grade Analyzer</h1>
+
+            <div class="table-container">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Roll</th>
+                            <th>Total</th>
+                            <th>%</th>
+                            <th>GPA</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody class="table-body"></tbody>
+                </table>
+            </div>
+
+            <button class="add-student">Add Student</button>
+
+            <form class="student-form hidden">
+                <h2>Add Student</h2>
+
+                <div class="grid">
+                    <label>
+                        Enter Name
+                        <input type="text" name="name" required />
+                    </label>
+
+                    <label>
+                        Enter Roll No.
+                        <input type="number" name="roll" required />
+                    </label>
+                </div>
+
+                <h3>Enter Subject Marks</h3>
+
+                <div class="grid">
+                    <label>
+                        Science
+                        <input
+                            type="number"
+                            name="science"
+                            min="0"
+                            max="100"
+                            required
+                        />
+                    </label>
+
+                    <label>
+                        Mathematics
+                        <input
+                            type="number"
+                            name="maths"
+                            min="0"
+                            max="100"
+                            required
+                        />
+                    </label>
+
+                    <label>
+                        English
+                        <input
+                            type="number"
+                            name="english"
+                            min="0"
+                            max="100"
+                            required
+                        />
+                    </label>
+
+                    <label>
+                        Computer
+                        <input
+                            type="number"
+                            name="computer"
+                            min="0"
+                            max="100"
+                            required
+                        />
+                    </label>
+
+                    <label>
+                        Social Studies
+                        <input
+                            type="number"
+                            name="social"
+                            min="0"
+                            max="100"
+                            required
+                        />
+                    </label>    
+                </div>
+
+                <div class="btn-row">
+                    <button type="submit" class="submit">Submit</button>
+                    <button type="button" class="cancel">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

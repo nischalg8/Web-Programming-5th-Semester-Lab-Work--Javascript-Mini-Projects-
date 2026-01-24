@@ -1,44 +1,65 @@
-let display = document.getElementById('display');
-const buttons = document.querySelectorAll('button');
-const historyList = document.getElementById('history-list');
+let display = document.getElementById("display");
+const buttons = document.querySelectorAll("button");
+let historyList = document.getElementById("history-list");
 
-let expression = '';
+let expression = "";
+let history = [];
+
+class Operation {
+    constructor(expression, result) {
+        this.expression = expression;
+        this.result = result;
+    }
+}
 
 function addToHistory(exp, result) {
-  const li = document.createElement('li');
-  li.textContent = `${exp} = ${result}`;
+    if (history.length == 5) history.splice(0, 1);
+    const operation = new Operation(exp, result);
+    history.push(operation);
+    displayHistory();
+}
 
-  historyList.prepend(li);
+function displayHistory() {
+    historyList.innerHTML = "";
+    history.forEach((operation, index) => {
+        const li = document.createElement("li");
+        li.textContent = `${operation.expression} = ${operation.result}`;
 
-  if (historyList.children.length > 5) {
-    historyList.removeChild(historyList.lastChild);
-  }
+        historyList.appendChild(li);
+    });
 }
 
 buttons.forEach((button) => {
-  button.addEventListener('click', () => {
-    const value = button.textContent;
-    console.log(button.value);
-    if (value === 'C') {
-      expression = '';
-      display.value = '';
-      return;
-    }
+    button.addEventListener("click", (e) => {
+        e.preventDefault();
+        const value = button.textContent;
+        if (value === "C") {
+            expression = "";
+            display.value = "";
+            return;
+        }
+        if (value === "=") {
+            try {
+                const result = eval(expression).toString();
+                addToHistory(expression, result);
+                expression = result;
+                display.value = result;
+            } catch (err) {
+                display.value = "Error";
+                expression = "";
+                console.log(err);
+            }
+            return;
+        }
+        if (value === "Clear History") {
+            history = [];
+            displayHistory();
 
-    if (value === '=') {
-      try {
-        const result = eval(expression);
-        addToHistory(expression, result);
-        expression = result.toString();
-        display = expression;
-      } catch {
-        display.value = 'Error';
-        expression = '';
-      }
-      return;
-    }
-
-    expression += value;
-    display.value = expression;
-  });
+            display.value = "";
+            expression = "";
+            return;
+        }
+        expression += value;
+        display.value = expression;
+    });
 });
