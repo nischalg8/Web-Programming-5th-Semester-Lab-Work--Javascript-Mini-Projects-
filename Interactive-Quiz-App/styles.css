@@ -1,0 +1,169 @@
+:root {
+  
+    --paper-white: #ffffff;
+    --ink-black: #1a1c1e;
+    --slate-gray: #4a5568;
+    --accent-academic: #2d6a4f; 
+    --accent-soft: #e8f3ee;
+    --border-light: #e2e8f0;
+    --bg-workspace: #f8fafc;
+    
+  
+    --card-padding: 3rem;
+    --element-gap: 2rem;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+
+body {
+    background-color: var(--slate-gray);
+    color: var(--ink-black);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    line-height: 1.6; 
+    flex-direction: column;
+}
+header{
+    position: absolute;
+    top: 100px;
+    background: var(--slate-gray);
+    border-radius: 10px;
+    width: 80%;
+    text-align: center;
+    color: var(--accent-soft);
+}
+
+.quiz-section-wrapper {
+    width: 100%;
+    max-width: 700px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: var(--element-gap);
+}
+
+.quiz-section {
+    background-color: var(--paper-white);
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.1);
+    padding: var(--card-padding); 
+    display: flex;
+    flex-direction: column;
+}
+
+.answered-number {
+    display: block;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--slate-gray);
+    margin-bottom: 1.2rem;
+    font-weight: 600;
+}
+
+.question-para {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--ink-black);
+    line-height: 1.4;
+    margin-bottom: 2.5rem; 
+    border-left: 5px solid var(--accent-academic);
+    padding-left: 1.5rem;
+}
+
+
+.options_set fieldset {
+    border: none;
+    display: grid;
+    gap: 1.2rem; 
+}
+
+.options_set label {
+    display: flex;
+    align-items: center;
+    background-color: var(--paper-white);
+    padding: 1.2rem 1.5rem;
+    border: 1.5px solid var(--border-light);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    font-size: 1.05rem;
+    color: var(--slate-gray);
+}
+
+.options_set label:hover {
+    border-color: var(--accent-academic);
+    background-color: var(--bg-workspace);
+    color: var(--ink-black);
+}
+
+
+.options_set input[type="radio"] {
+    display: none;
+}
+
+.options_set input[type="radio"]:checked + label {
+    background-color: var(--accent-soft);
+    border-color: var(--accent-academic);
+    color: var(--accent-academic);
+    font-weight: 600;
+}
+
+
+.buttons-wrapper {
+    margin-top: 3rem; 
+    display: flex;
+    justify-content: space-between;
+}
+
+button {
+    padding: 0.9rem 2rem;
+    border-radius: 10px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+    font-size: 1rem;
+    border: none;
+}
+
+.start-quiz, .submit-btn {
+    background-color: var(--accent-academic);
+    color: white;
+}
+
+.next-btn {
+    background-color: var(--ink-black);
+    color: white;
+    margin-left: auto; 
+}
+
+.prev-btn {
+    background-color: transparent;
+    color: var(--slate-gray);
+    border: 1px solid var(--border-light);
+    width: fit-content;
+}
+
+button:hover {
+    transform: translateY(-1px);
+    opacity: 0.9;
+}
+
+.hidden { display: none !important; }
+
+
+.review-question {
+    background-color: #f8fafc;
+    padding: 1.5rem;
+    border-radius: 12px;
+    margin-top: 1rem;
+    border-top: 1px solid var(--border-light);
+}

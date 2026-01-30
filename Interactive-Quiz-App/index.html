@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Interactive Quiz App</title>
+        <script type="module" src="index.js" defer></script>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <header class="header">
+            <h1 class="Title">Welcome to Interactive Quiz App</h1>
+        </header>
+        <div class="quiz-section-wrapper">
+            <button class="start-quiz">Start Quiz</button>
+
+            <div class="quiz-section hidden">
+                <div class="question"></div>
+                <div class="options_set"></div>
+                <div class="answered-count-no"></div>
+
+                <div class="button-wrapper">
+                    
+                    <button type="button" class="next-btn">Next</button>
+                    <button type="button" class="prev-btn hidden">
+                        Previous
+                    </button>
+                    <button type="submit" class="submit-btn hidden">
+                        Submit Quiz!
+                    </button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
