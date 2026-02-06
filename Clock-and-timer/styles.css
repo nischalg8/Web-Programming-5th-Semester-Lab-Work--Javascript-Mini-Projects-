@@ -1,0 +1,92 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: system-ui, sans-serif;
+}
+
+body {
+    background: #f4f4f2;
+    color: #222;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    padding: 3rem;
+}
+
+/* CLOCK */
+.clock-wrapper {
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+/* TIMER */
+.timer-wrapper {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 320px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.input-time {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.input-time input {
+    width: 70px;
+    padding: 0.4rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.input-time button {
+    padding: 0.4rem 0.8rem;
+    background: #2f4f4f;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.timer {
+    text-align: center;
+}
+
+.title {
+    margin-bottom: 0.5rem;
+}
+
+.timer-time {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin: 1rem 0;
+}
+
+.timer button {
+    margin: 0.3rem;
+    padding: 0.4rem 0.8rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.reset {
+    background: #444;
+    color: #fff;
+}
+
+.pause {
+    background: #777;
+    color: #fff;
+}
+
+.resume {
+    background: #556b2f;
+    color: #fff;
+}

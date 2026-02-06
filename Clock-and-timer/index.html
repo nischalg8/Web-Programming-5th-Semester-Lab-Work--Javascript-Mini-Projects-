@@ -1,0 +1,33 @@
+    <!doctype html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title>Clock and Timer</title>
+            <script src="index.js" defer></script>
+            <link rel="stylesheet" href="styles.css">
+        </head>
+        <body>
+            <div class="clock-wrapper">
+                <div class="clock"></div>
+            </div>
+            <div class="timer-wrapper">
+
+                <form class="input-time">
+                    <input type="number" name="hours" id="hours" min="0" max="23" />
+                    <input type="number" name='minutes' id="minutes" min="0" max="59" />
+                    <input type="number" name='seconds' id="seconds" min="0" max="59" />
+
+                    <button type="submit">Start</button>
+                </form>
+
+                <div class='timer'>
+                    <h1 class="title">Timer</h1>
+                        <button class="reset" type="button">Reset</button>
+                        <button class="pause" type="button">Pause</button>
+                        <button class='resume' type="button">Resume</button>
+                        <p class='timer-time'></p>
+                    </div>
+            </div>
+        </body>
+    </html>
