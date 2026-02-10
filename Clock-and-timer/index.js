@@ -59,7 +59,8 @@ function startTimer() {
 
 timerForm.addEventListener("submit", (e) => {
     e.preventDefault();
-  
+    // to make sure interval is cleared everytime user presses
+    clearInterval(timerInterval);
     const time = new FormData(timerForm);
 
     hours = Number(time.get("hours")) || 0;

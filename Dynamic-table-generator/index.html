@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dynamic Table</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Dynamic Table Generator</h2>
+
+<label>Rows: <input type="number" id="rows" min="1" value="3"></label>
+<label>Columns: <input type="number" id="cols" min="1" value="3"></label>
+<button id="generateBtn">Generate Table</button>
+
+<div>
+  <button id="addRowBtn">Add Row</button>
+  <button id="deleteRowBtn">Delete Row</button>
+  <button id="highlightBtn">Highlight Even Rows</button>
+</div>
+
+<table id="dynamicTable"></table>
+
+<script src="script.js"></script>
+</body>
+</html>
