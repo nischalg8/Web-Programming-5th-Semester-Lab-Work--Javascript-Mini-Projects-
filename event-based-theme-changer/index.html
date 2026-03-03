@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Theme Selector</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Theme Selector</h2>
+
+        <div class="theme-control">
+            <label for="bgColor">Background Color:</label>
+            <input type="color" id="bgColor" value="#ffffff">
+        </div>
+
+        <div class="theme-control">
+            <label for="textColor">Text Color:</label>
+            <input type="color" id="textColor" value="#333333">
+        </div>
+
+        <div class="theme-control">
+            <label for="buttonColor">Button Color:</label>
+            <input type="color" id="buttonColor" value="#28a745">
+        </div>
+
+        <button id="resetBtn">Reset Theme</button>
+
+        <p class="demo-text">This is some sample text to show theme changes.</p>
+        <button class="demo-button">Sample Button</button>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
